@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "name": "location",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "products": {
+      "collection": "product",
+      "via": "locations",
+      "dominant": true
+    },
+    "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}
